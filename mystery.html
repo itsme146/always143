@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Revealed ✨</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            animation: fadeInScale 1.5s ease-out;
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        h1 {
+            color: #6a11cb;
+            margin-bottom: 1.5rem;
+        }
+        
+        .reveal-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #444;
+        }
+        
+        .heart {
+            color: #ff4d6d;
+            font-size: 3rem;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .signature {
+            font-style: italic;
+            color: #6a11cb;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .reveal-button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            background: #ff4d6d;
+            color: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .reveal-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #name-section {
+            display: none;
+            animation: fadeIn 1s ease-out;
+            font-size: 1.3rem;
+            color: #6a11cb;
+            margin-top: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="mystery-music.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>The Mystery is Revealed!</h1>
+        
+        <p class="reveal-text">
+            I walk beside you, yet remain unseen,  
+            A whisper in the wind, a breath between.  
+            Each passing glance, a stolen sight,  
+            A love unspoken, but burning bright.  
+            <br><br>
+            You laugh, you smile, you shine so free,  
+            Not knowing who’s watching secretly.  
+            Not in your world, yet close I stay,  
+            A heart that follows you every day.  
+            <br><br>
+            Look around, the answer’s near,  
+            A secret held so dear.  
+            Find me, love, if you can,  
+            A heart waiting for your hand. ❤️  
+        </p>
+        
+        <!-- Reveal My Name Form -->
+        <form action="https://formsubmit.co/mymystery146always@gmail.com" method="POST" id="mysteryForm">
+            <input type="hidden" name="_subject" value="Love Letter Response: Reveal My Name">
+            <input type="hidden" name="response" value="User clicked 'Reveal My Name'">
+            <button type="submit" class="reveal-button">Reveal My Name ❤️</button>
+        </form>
+
+        <!-- Hidden Section (Revealed After Clicking Button) -->
+        <div id="name-section">
+            <p>Maybe you've seen me, maybe not,  
+            But I’m always around, that’s my plot.  
+            My heart beats faster when you’re near,  
+            But will you see me? Will it be clear? ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("mysteryForm").addEventListener("submit", function(event) {
+            setTimeout(() => {
+                document.getElementById("name-section").style.display = 'block'; 
+            }, 2000); // Show name section after 2 seconds
+        });
+    </script>
+
+</body>
+</html>

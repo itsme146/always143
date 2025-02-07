@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To The Love of My Life ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffecec, #ffe4e1);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #ff4d6d;
+            margin-bottom: 1.5rem;
+        }
+        
+        .message {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .letter {
+            text-align: left;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .signature {
+            text-align: right;
+            font-style: italic;
+            color: #ff4d6d;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        button[type="submit"]:first-of-type {
+            background: #ff4d6d;
+            color: white;
+        }
+        
+        button[type="submit"]:last-of-type {
+            background: #4d79ff;
+            color: white;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="mystery-music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="container fade-in">
+        <h1>To The Love of My Life ❤️</h1>
+        <p class="message">There are moments in life when everything changes. One thing led to another, and suddenly, my heart whispered your name...</p>
+        
+        <div class="letter">
+            <p>My love,</p>
+            <p>
+                Every heartbeat echoes your name, and every moment without you feels incomplete. 
+                You are the melody to my song, the light to my darkest nights. The way your eyes sparkle, 
+                the warmth of your embrace—it all makes my world a better place.
+            </p>
+            <p>
+                No words can truly express how much you mean to me, but let this be a small whisper of my love.
+            </p>
+            <p>Forever yours,</p>
+            <p class="signature">Your Mystery Admirer ❤️</p>
+        </div>
+        
+        <div class="buttons">
+            <form action="https://formsubmit.co/mymystery146always@gmail.com" method="POST" target="_blank">
+                <input type="hidden" name="_subject" value="Love Letter Response: Yes!">
+                <input type="hidden" name="response" value="Yes, I would love to!">
+                <button type="submit" onclick="playMusic()">Yes, I would love to! ❤️</button>
+            </form>
+            
+            <form action="https://formsubmit.co/mymystery146always@gmail.com" method="POST" id="mysteryForm" target="_blank" onsubmit="handleMysteryClick(event)">
+                <input type="hidden" name="_subject" value="Love Letter Response: Mystery">
+                <input type="hidden" name="response" value="User clicked 'Reveal The Mystery'">
+                <button type="submit">Reveal The Mystery ✨</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function playMusic() {
+            document.getElementById("bg-music").play();
+        }
+        
+        function handleMysteryClick(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Submit the form manually
+            fetch(event.target.action, {
+                method: 'POST',
+                body: new FormData(event.target)
+            });
+            
+            // Open mystery page in new tab
+            window.open('mystery.html', '_blank');
+        }
+    </script>
+</body>
+</html>
